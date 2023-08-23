@@ -1,11 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose');
-const router = express.Router();
 const user = require('../models/User')
+const dotenv = require('dotenv')
 const { body, validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const jwtSecret = "HelloToMyMernProjectOfRasoi!!!!!"
+
+dotenv.config();
+
+const jwtSecret = process.env.JWT_SECRET;
+const router = express.Router();
 
 router.post("/createUser",
 body('email').isEmail(),

@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://mishra07aayush:Golu2001@cluster0.n23hrem.mongodb.net/rasoi?retryWrites=true&w=majority'
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const mongoURI = process.env.MONGO_URI
 
 const mongoDB = async () => {
     try{
