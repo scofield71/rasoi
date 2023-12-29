@@ -9,7 +9,7 @@ export default function Home() {
   const [foodItem,setFoodItem] = useState([]);
   const [search,setSearch] = useState("")
   const getData = async () => {
-    let response = await fetch("http://localhost:8080/api/foodData",{
+    let response = await fetch("https://rasoi-api.onrender.com/api/foodData",{
       method:"GET"
     })
     response = await response.json()
@@ -55,7 +55,7 @@ export default function Home() {
     </div>
         <div className='container'> 
         {
-          foodCat !== [] ? 
+          foodCat.length !== 0 ? 
           foodCat.map((data) => {
             return (
               <div className='row mb-3'>
@@ -63,7 +63,7 @@ export default function Home() {
                   {data.CategoryName}
                 </div>
                 <hr />
-                { foodItem !== [] ? foodItem.filter((item) => item.CategoryName===data.CategoryName && (item.name.toLowerCase().includes(search.toLowerCase())))
+                { foodItem.length !== 0 ? foodItem.filter((item) => item.CategoryName===data.CategoryName && (item.name.toLowerCase().includes(search.toLowerCase())))
                 .map(filterItem => {
                   return(
                   <div key={filterItem._id} className='col-12 col-md-6 col-lg-3'>

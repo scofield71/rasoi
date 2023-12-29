@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Carousal() {
   return (
-    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel" style={{objectFit:"contain !important"}}>
+    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
         <div className="carousel-inner" id="carousel">
             <div className="carousel-caption" style={{"zIndex":"10"}}>
                 <form className="d-flex">
@@ -11,13 +11,13 @@ export default function Carousal() {
                 </form>
             </div>
             <div className="carousel-item active">
-                <img className="d-block w-100" src="https://source.unsplash.com/random/900×700/?burger" alt="First slide"/>
-            </div>
-            <div className="carousel-item ">
-                <img className="d-block w-100" src="https://source.unsplash.com/random/900×700/?pizza" alt="Second slide"/>
+                <img src="https://source.unsplash.com/random/900×700/?burger" className="d-block w-100" alt="First slide"/>
             </div>
             <div className="carousel-item">
-                <img className="d-block w-100" src="https://source.unsplash.com/random/900×700/?pastry" alt="Third slide"/>
+                <img src="https://source.unsplash.com/random/900×700/?pizza"  className="d-block w-100" alt="Second slide"/>
+            </div>
+            <div className="carousel-item">
+                <img src="https://source.unsplash.com/random/900×700/?pastry" className="d-block w-100" alt="Third slide"/>
             </div>
         </div>
         <button className="carousel-control-prev" data-bs-target="#carouselExampleFade" type="button" data-bs-slide="prev">
