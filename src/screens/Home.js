@@ -55,7 +55,7 @@ export default function Home() {
     </div>
         <div className='container'> 
         {
-          foodCat.length !== 0 ? 
+          foodCat !== null ? 
           foodCat.map((data) => {
             return (
               <div className='row mb-3'>
