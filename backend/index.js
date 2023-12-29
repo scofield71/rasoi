@@ -6,7 +6,7 @@ const port = process.env.PORT || 8080
 const mongoDB = require('./database')
 
 app.use((req,res,next) => {
-  res.setHeader("Access-Control-Allow-Origin","http://localhost:3000")
+  res.setHeader("Access-Control-Allow-Origin","https://rasoi-l7cl.onrender.com")
   res.header(
     "Access-Control-Allow-Headers",
     "Origin,X-Requested-With,Content-Type,Accept"
@@ -25,3 +25,4 @@ app.listen(port, () => {
     console.log(`Rasoi app is listening of port ${port}`)
 })
 //https://rasoi-l7cl.onrender.com
+//http://localhost:3000
