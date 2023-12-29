@@ -9,7 +9,7 @@ export default function Home() {
   const [foodItem,setFoodItem] = useState([]);
   const [search,setSearch] = useState("")
   const getData = async () => {
-    let response = await fetch("https://rasoi-api.onrender.com/api/foodData",{
+    let response = await fetch("https://scofield-rasoi-api.onrender.com/api/foodData",{
       method:"GET"
     })
     response = await response.json()
