@@ -8,7 +8,7 @@ const bcrypt = require('bcryptjs');
 
 dotenv.config();
 
-const jwtSecret = "HelloToMyMernProjectOfRasoi!!!!!";
+const jwtSecret = process.env.JWT_SECRET;
 const router = express.Router();
 
 router.post("/createUser",

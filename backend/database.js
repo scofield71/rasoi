@@ -7,7 +7,7 @@ const mongoURI = process.env.MONGO_URI
 
 const mongoDB = async () => {
     try{
-        await mongoose.connect("mongodb+srv://mishra07aayush:Golu2001@cluster0.n23hrem.mongodb.net/rasoi?retryWrites=true&w=majority",{ useNewUrlParser: true });
+        await mongoose.connect(mongoURI,{ useNewUrlParser: true });
         console.log("Connected to mongoDB");
 
         const fetched_data = await mongoose.connection.db.collection("food_items");
